@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Message } from '../01-useState/Message';
+import { Message } from './Message';
 
 export const SimpleForm = () => {
     const [formState, setFormState] = useState({
