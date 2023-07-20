@@ -12,6 +12,7 @@ export const Message = () => {
         }
         window.addEventListener('mousemove', onMouseMove);
 
+        // limpiar listener (parecido a unmount)
         return () => {
             window.removeEventListener('mousemove', onMouseMove);          
         }
