@@ -24,20 +24,23 @@ import { JournalApp } from './JournalApp';
 import { BrowserRouter } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme'
+import theme from './theme';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
 
-    <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <JournalApp />
+        </BrowserRouter>
 
-      <CssBaseline />
-      <BrowserRouter>
-        <JournalApp />
-      </BrowserRouter>
-    </ThemeProvider>
-
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>
 
 );
