@@ -7,7 +7,7 @@ export const store = configureStore({
         ui: uiSlice.reducer,
         calendar: calendarSlice.reducer,
     },
-    // quitar error de serialiacion fecha
+    // quitar error de serializacion fecha
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false
     })
